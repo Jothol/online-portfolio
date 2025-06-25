@@ -2,8 +2,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-100 text-gray-900 p-8">
       <header className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-2">Your Name</h1>
-        <p className="text-lg">Aspiring Software Developer | Frontend, OOP, Algorithms</p>
+        <h1 className="text-4xl font-bold mb-2">Jon Olsen</h1>
+        <p className="text-lg">Software Engineer | Frontend, OOP, Algorithms</p>
       </header>
 
       <section className="mb-12">
@@ -25,7 +25,7 @@ export default function Home() {
       </section>
 
       <footer className="text-center text-sm text-gray-500">
-        <p>© {new Date().getFullYear()} Your Name — Built with Next.js & Tailwind CSS</p>
+        <p>© {new Date().getFullYear()} Jon Olsen — Built with Next.js & Tailwind CSS</p>
       </footer>
     </main>
   );
