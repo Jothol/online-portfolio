@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ParticlesBackground from "@/components/ParticlesBackground"; // ✅ Add this
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,12 +28,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative text-white`}
       >
-        {/* ✅ Persistent background mounted behind all pages */}
-        <div className="fixed inset-0 -z-10 pointer-events-none">
-          <ParticlesBackground />
-        </div>
+        {/* Static portal root for the particle canvas */}
+        <div id="particles-root" className="fixed inset-0 -z-10 pointer-events-none" />
+        
+        {/* React portal particle layer */}
+        <ParticlesBackground />
 
-        {/* ✅ Page content */}
+        {/* App content */}
         {children}
       </body>
     </html>
