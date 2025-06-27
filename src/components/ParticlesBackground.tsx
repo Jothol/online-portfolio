@@ -9,6 +9,7 @@ export default function ParticlesBackground() {
   const [engineReady, setEngineReady] = useState(false);
 
   useEffect(() => {
+    console.log("ParticlesBackground mounted")
     initParticlesEngine(async (engine: Engine) => {
       await loadSlim(engine);
     }).then(() => setEngineReady(true));
@@ -20,7 +21,7 @@ export default function ParticlesBackground() {
         <Particles
           id="tsparticles"
           options={{
-            fullScreen: { enable: true, zIndex: -1 },
+            fullScreen: { enable: true, zIndex: -999 },
             background: {
               color: { value: '#0f172a' },
             },

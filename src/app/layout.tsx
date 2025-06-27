@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative text-white`}
       >
         {/* ✅ Persistent background mounted behind all pages */}
-        <div className="fixed inset-0 -z-10 pointer-events-none">
+        <div className="fixed inset-0 -z-50 pointer-events-none">
           <ParticlesBackground />
         </div>
 
