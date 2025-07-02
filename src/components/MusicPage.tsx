@@ -1,23 +1,31 @@
 'use client';
 
+import { ArrowLeft } from 'lucide-react';
+
 interface Props {
   onBack: () => void;
 }
 
 export default function MusicPage({ onBack }: Props) {
   return (
-    <div className="absolute inset-0 z-10 p-8 overflow-y-auto">
-      <button onClick={onBack} className="text-white mb-4 underline">
-        ← Back
+    <div>
+      <button
+        onClick={onBack}
+        className="absolute top-6 left-6 flex items-center text-white bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full shadow transition"
+      >
+        <ArrowLeft className="w-4 h-4 mr-2" />
+        Back
       </button>
-      <h1 className="text-3xl font-bold mb-4">Music Recommendation App</h1>
-      <p className="text-lg mb-4">
-        Algorithm-based app that adjusts music recs based on user behavior.
-      </p>
-      <p>
-        This project explores adaptive recommendation algorithms. Songs are dynamically
-        queued based on user interaction and feedback. Built with Next.js, Firebase, and Tailwind CSS.
-      </p>
+      <div className="mb-12">
+        <h1 className="text-2xl font-semibold mb-4">Music Recommendation App</h1>
+        <p className="text-lg mb-4">
+          Algorithm-based app that adjusts music recs based on user behavior.
+        </p>
+        <p>
+          This project explores adaptive recommendation algorithms. Songs are dynamically
+          queued based on user interaction and feedback. Built with Next.js, Firebase, and Tailwind CSS.
+        </p>
+      </div>
     </div>
   );
 }
