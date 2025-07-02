@@ -1,25 +1,53 @@
-// components/FadeWrapper.tsx
 'use client';
 
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Props {
   children: React.ReactNode;
-  keyId: string; // unique ID for each page transition
+  keyId: string;
 }
 
 export default function FadeWrapper({ children, keyId }: Props) {
+  const [blockInput, setBlockInput] = useState(false);
+
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
+
+    if (!isMobile) return;
+
+    setBlockInput(true); // Block input
+
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+    });
+
+    // Give time for scroll animation before unblocking
+    setTimeout(() => {
+    setBlockInput(false);
+    }, 400); // Sync with fade duration
+  }, [keyId]);
+
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={keyId}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.4 }}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <>
+      {/* Fade content */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={keyId}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          {children}
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Input-blocking overlay */}
+      {blockInput && (
+        <div className="fixed inset-0 bg-transparent z-50 pointer-events-auto" />
+      )}
+    </>
   );
 }

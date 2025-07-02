@@ -11,8 +11,7 @@ export default function DnDPage({ onBack }: Props) {
     <div>
       <button
         onClick={onBack}
-        className="absolute top-6 left-6 flex items-center text-white bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full shadow transition"
-      >
+        className="hidden md:flex absolute top-6 left-6 items-center text-white bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full shadow transition"      >
         <ArrowLeft className="w-4 h-4 mr-2" />
         Back
       </button>
