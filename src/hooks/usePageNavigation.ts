@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-type Page = 'home' | 'music' | 'ai' | 'dnd';
+type Page = 'home' | 'music' | 'ai' | 'dnd' | 'expense';
 
 export function usePageNavigation() {
   const [activePage, setActivePage] = useState<Page>(() => {

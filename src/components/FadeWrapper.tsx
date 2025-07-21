@@ -13,20 +13,23 @@ export default function FadeWrapper({ children, keyId }: Props) {
 
   useEffect(() => {
     const isMobile = window.innerWidth <= 768;
+    const scrollThreshold = 100;
 
     if (!isMobile) return;
 
-    setBlockInput(true); // Block input
+    if (window.scrollY > scrollThreshold) {
+      setBlockInput(true); // Block input
 
-    window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-    });
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
 
-    // Give time for scroll animation before unblocking
-    setTimeout(() => {
-    setBlockInput(false);
-    }, 400); // Sync with fade duration
+      // Give time for scroll animation before unblocking
+      setTimeout(() => {
+        setBlockInput(false);
+      }, 400); // Sync with fade duration
+    }
   }, [keyId]);
 
   return (
