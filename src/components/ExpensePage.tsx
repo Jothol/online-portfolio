@@ -32,6 +32,28 @@ export default function ExpensePage({ onBack }: Props) {
               <li><strong> Expense Logging</strong> with categories: Shared, Personal, Private, and Gift.</li>
               <li><strong> Dynamic Log View</strong> with grouped and reversed entries, bold text, and intuitive icons.</li>
               <li><strong> Visual Summary & Balance Scale</strong> showing contributions and debts in real time.</li>
+              <div className="bg-black/40 backdrop-blur-md border border-white/10 shadow-md rounded-lg p-6 max-w-[700px]">
+                <h3 className="text-xl font-bold mb-4">Early Development Demo</h3>
+                <video
+                  src="/videos/early-scale-demo.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="rounded-md w-full h-auto object-cover"
+                />
+              </div>
+              <div className="bg-black/40 backdrop-blur-md border border-white/10 shadow-md rounded-lg p-6 max-w-[700px]">
+                <h3 className="text-xl font-bold mb-4">Late Development Demo</h3>
+                <video
+                  src="/videos/late-scale-demo.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="rounded-md w-full h-auto object-cover"
+                />
+              </div>
               <li><strong> Payments & Adjustments:</strong> Prevents zero-dollar entries; supports direct settlements.</li>
               <li><strong> Responsive Design:</strong> Mobile-first layout with fixed nav tabs and swipeable toggles.</li>
             </ul>
