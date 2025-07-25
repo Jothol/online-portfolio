@@ -24,28 +24,35 @@ export default function Home() {
               <h2 className="text-2xl font-semibold mb-4">Projects</h2>
               <div className="grid gap-6 md:grid-cols-2">
                 <div
-                  className="bg-black/40 backdrop-blur-md border border-white/10 shadow-md rounded-lg p-6 cursor-pointer hover:scale-[1.02] transition"
+                  className="bg-black/40 backdrop-blur-md border border-white/10 animate-glow-pulse sm:animate-none transition rounded-lg p-6 cursor-pointer"
+                  style={{ animationDelay: '0ms' }}
                   onClick={() => navigateTo('music')}
                 >
                   <h3 className="text-xl font-bold mb-2">Music Recommendation App</h3>
                   <p>Algorithm-based app that adjusts music recs based on user behavior.</p>
                 </div>
+
                 <div
-                  className="bg-black/40 backdrop-blur-md border border-white/10 shadow-md rounded-lg p-6 cursor-pointer hover:scale-[1.02] transition"
+                  className="bg-black/40 backdrop-blur-md border border-white/10 animate-glow-pulse sm:animate-none transition rounded-lg p-6 cursor-pointer"
+                  style={{ animationDelay: '400ms' }}
                   onClick={() => navigateTo('ai')}
                 >
                   <h3 className="text-xl font-bold mb-2">AI Prompt Chaining Tool</h3>
                   <p>Early-stage AI project that builds and chains intelligent prompts.</p>
                 </div>
+
                 <div
-                  className="bg-black/40 backdrop-blur-md border border-white/10 shadow-md rounded-lg p-6 cursor-pointer hover:scale-[1.02] transition"
+                  className="bg-black/40 backdrop-blur-md border border-white/10 animate-glow-pulse sm:animate-none transition rounded-lg p-6 cursor-pointer"
+                  style={{ animationDelay: '800ms' }}
                   onClick={() => navigateTo('dnd')}
                 >
                   <h3 className="text-xl font-bold mb-2">D&D Campaign Website</h3>
                   <p>HTML/CSS site for D&D lore, rules, and user stat tracking.</p>
                 </div>
+
                 <div
-                  className="bg-black/40 backdrop-blur-md border border-white/10 shadow-md rounded-lg p-6 cursor-pointer hover:scale-[1.02] transition"
+                  className="bg-black/40 backdrop-blur-md border border-white/10 animate-glow-pulse sm:animate-none transition rounded-lg p-6 cursor-pointer"
+                  style={{ animationDelay: '1200ms' }}
                   onClick={() => navigateTo('expense')}
                 >
                   <h3 className="text-xl font-bold mb-2">Expense Tracker App</h3>

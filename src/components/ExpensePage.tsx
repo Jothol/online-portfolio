@@ -40,9 +40,16 @@ export default function ExpensePage({ onBack }: Props) {
                   loop
                   muted
                   playsInline
-                  className="rounded-md w-full h-auto object-cover"
+                  className="rounded-md mb-4 w-full h-auto object-cover"
                 />
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li>Engineered the scale by modularizing it into bar, cup, and stand components.</li>
+                  <li>Implemented synchronized rotations and translations to mimic real-world balance behavior.</li>
+                  <li>Developed logic to stack gold and silver weights into a centered pyramid for each cup.</li>
+                  <li>Created test interfaces to validate dynamic weight placement and angular response.</li>
+                </ul>
               </div>
+
               <div className="bg-black/40 backdrop-blur-md border border-white/10 shadow-md rounded-lg p-6 max-w-[700px]">
                 <h3 className="text-xl font-bold mb-4">Late Development Demo</h3>
                 <video
@@ -53,6 +60,12 @@ export default function ExpensePage({ onBack }: Props) {
                   playsInline
                   className="rounded-md w-full h-auto object-cover"
                 />
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li>Used AI tools to generate and stylize image assets for the bar, stand, cups, and weights.</li>
+                  <li>Fine-tuned weight stacking logic with offsets to preserve pyramid centering at all scales.</li>
+                  <li>Integrated an angle calculation function driven by cumulative weighted input on each side.</li>
+                  <li>Finalized a reusable component API with externally callable `setBalance` and `updateBalance` methods.</li>
+                </ul>
               </div>
               <li><strong> Payments & Adjustments:</strong> Prevents zero-dollar entries; supports direct settlements.</li>
               <li><strong> Responsive Design:</strong> Mobile-first layout with fixed nav tabs and swipeable toggles.</li>
